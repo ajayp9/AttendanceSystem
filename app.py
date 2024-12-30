@@ -1,6 +1,7 @@
 from flask import Flask
 from tkinter import Tk
 from main import Face_Recognition_System  # Assuming main.py is in the same directory
+import os
 
 app = Flask(__name__)
 
@@ -19,4 +20,6 @@ def start_gui():
     return 'Face Recognition GUI opened.'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Get the port from environment variable or default to 5000
+    port = int(os.environ.get("PORT", 5000))  # Use the port Render gives to your app
+    app.run(debug=False, host='0.0.0.0', port=port)  # Bind to 0.0.0.0 to allow external access
