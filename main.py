@@ -2,13 +2,13 @@ from tkinter import*
 from tkinter import ttk
 from PIL import Image, ImageTk
 from student import Student
-import os
 from train import Train
 from face_recognition import Face_Recognition
 from attendance import Attendance
 from developer import Developer
 from help import Help
 from tkinter import messagebox
+import os
 
 
 class Face_Recognition_System:
