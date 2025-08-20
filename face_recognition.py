@@ -135,7 +135,11 @@ class Face_Recognition:
             self.mark_attendance(i,r,n,d)
           else:
             cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),3)
-            cv2.putText(img,"Unknow Face",(x,y-5),cv2.FONT_HERSHEY_COMPLEX,0.8,(255,255,255),3)
+            cv2.putText(img,"Unknown",(x,y-5),cv2.FONT_HERSHEY_COMPLEX,0.8,(255,255,255),3)
+        
+        
+        
+            
         except mysql.connector.Error as err:
           print(f"Error: {err}")
           cv2.putText(img, "Database Error", (x, y - 5), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 0, 0), 3)
@@ -150,7 +154,7 @@ class Face_Recognition:
       coord=draw_boundray(img,faceCascade,1.1,10,(255,255,255),"Face",clf)
       return img
     
-    faceCascade=cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+    faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
     clf=cv2.face.LBPHFaceRecognizer_create()
     clf.read("classifier.xml")
 
@@ -175,3 +179,5 @@ if __name__=="__main__":
   root=Tk()
   obj=Face_Recognition(root)
   root.mainloop()
+
+
