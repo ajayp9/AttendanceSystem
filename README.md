@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-🎓 Face Recognition Attendance System
 
-A Python + OpenCV + Tkinter + MySQL based project for managing student attendance using Face Recognition.
-✨ This system detects faces, trains a model, and marks attendance automatically.
-
-🚀 Features
-
-✅ Student Management (Add, Update, Delete in MySQL)
-✅ Capture & store student images in data/
-✅ Train LBPH Face Recognizer → creates classifier.xml
-✅ Real-time Face Recognition with OpenCV
-✅ Attendance saved in Ajay.csv (Name, ID, Time, Date, Status)
-✅ Beautiful Tkinter GUI (Help, Developer, Attendance, Exit buttons)
-
-
-🗄️ Database Setup
-
-=======
 # 🎓 Face Recognition Attendance System  
 
 A **Python + OpenCV + Tkinter + MySQL** based project for managing student attendance using Face Recognition. ✨  
@@ -59,75 +41,15 @@ CREATE TABLE IF NOT EXISTS student (
   Teacher VARCHAR(100),
   PhotoSample VARCHAR(10)
 );
-<<<<<<< HEAD
-
-
-📂 Project Structure
-
-📁 Face-Recognition-Attendance-System
-│── main.py
-│── student.py
-│── train.py
-│── face_recognition.py
-│── attendance.py
-│── developer.py
-│── help.py
-│── requirements.txt
-│── haarcascade_frontalface_default.xml
-│── classifier.xml (auto-generated)
-│── Ajay.csv (attendance file)
-│
-├── 📁 data/             # captured student images
-├── 📁 college_images/   # GUI related images
-
-
-▶️ How to Run
-
-1️⃣ Create virtual environment & install requirements:
-python -m venv venv
-venv\Scripts\activate      # (Windows)
-source venv/bin/activate   # (Linux/macOS)
-pip install -r requirements.txt
-
-2️⃣ Run the application:
-python main.py
 
 
 
-📖 Usage Flow
-
-🔹 Step 1: Student Details → Enter & Save.
-🔹 Step 2: Take Photo Sample → Captures 100 images → stored in data/.
-🔹 Step 3: Train Data → Generates classifier.xml.
-🔹 Step 4: Face Detector → Real-time recognition → Attendance in Ajay.csv.
-🔹 Step 5: Attendance → Import/Export CSV.
 
 
 
-📸 Project Snapshots
-
-🏠 Home Page
-## 🎬 Demo
-![Face Recognition Demo](college_images/main.png)
 
 
-👨‍🎓 Student Management
-## 🎬 Demo
-![Face Recognition Demo](college_images/wp2551980.jpg)
 
-
-📊 Attendance Sheet
-## 🎬 Demo
-![Face Recognition Demo](college_images/Attendance.png)
-
-
-🎥 Face Recognition in Action
-## 🎬 Demo
-![Face Recognition Demo](college_images/face.png)
-=======
-```  
-
----
 
 ## 📂 Project Structure  
 
@@ -185,10 +107,24 @@ python main.py
 ---
 
 ## 📸 Project Snapshots  
+📸 Project Snapshots
 
-### 🏠 Home Page  
-![Home Page](college_images/home.png)  
+🏠 Home Page
+## 🎬 Demo
+![Face Recognition Demo](college_images/main.png)
 
-### 🎬 Demo  
-(Add GIF/YouTube demo link here if available)  
->>>>>>> 6f90ecb
+
+👨‍🎓 Student Management
+## 🎬 Demo
+![Face Recognition Demo](college_images/wp2551980.jpg)
+
+
+📊 Attendance Sheet
+## 🎬 Demo
+![Face Recognition Demo](college_images/Attendance.png)
+
+
+🎥 Face Recognition in Action
+## 🎬 Demo
+![Face Recognition Demo](college_images/face.png)
+=======
