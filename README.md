@@ -1,4 +1,7 @@
 
+
+
+
 # 🎓 Face Recognition Attendance System  
 
 A **Python + OpenCV + Tkinter + MySQL** based project for managing student attendance using Face Recognition. ✨  
@@ -66,6 +69,23 @@ This system detects faces, trains a model, and marks attendance automatically.
 
 ---
 
+## 📂 Tech Stack  
+
+- **Language:** Python 3.x  
+- **Libraries:** OpenCV, NumPy, face_recognition, dlib, pandas  
+- **Database:** CSV / MySQL  
+- **GUI (optional):** Tkinter   
+
+---
+
+## 💻 Getting Started  
+
+### 1️⃣ Clone the repository  
+     
+   git clone https://github.com/ajayp9/face-recognition-attendance.git
+             cd face-recognition-attendance
+
+---
 ## ▶️ How to Run  
 
 ### 1️⃣ Create virtual environment & install requirements:  
@@ -115,11 +135,6 @@ python main.py
 📊 Attendance Sheet
 ## 🎬 Demo
 ![Face Recognition Demo](college_images/Attendance.png)
-
-
-📊 Attendance Sheet
-## 🎬 Demo
-![Face Recognition Demo](college_images/aap.png)
 
 
 🎥 Face Recognition in Action
