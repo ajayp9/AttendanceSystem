@@ -19,38 +19,31 @@ This system detects faces, trains a model, and marks attendance automatically.
 
 ## 🗄️ Database Setup  
 
-```sql
->>>>>>> 6f90ecb
-CREATE DATABASE IF NOT EXISTS face_recognizer;
-USE face_recognizer;
+   ```sql
+   >>>>>>> 6f90ecb
+             CREATE DATABASE IF NOT EXISTS face_recognizer;
+             USE face_recognizer;
 
-CREATE TABLE IF NOT EXISTS student (
-  Dep VARCHAR(50),
-  Course VARCHAR(50),
-  Year VARCHAR(20),
-  Semester VARCHAR(20),
-  Student_id INT PRIMARY KEY,
-  Name VARCHAR(100),
-  Division VARCHAR(10),
-  Roll VARCHAR(20),
-  Gender VARCHAR(10),
-  Dob VARCHAR(20),
-  Email VARCHAR(100),
-  Phone VARCHAR(20),
-  Address VARCHAR(255),
-  Teacher VARCHAR(100),
-  PhotoSample VARCHAR(10)
-);
+       CREATE TABLE IF NOT EXISTS student (
+       Dep VARCHAR(50),
+       Course VARCHAR(50),
+       Year VARCHAR(20),
+       Semester VARCHAR(20),
+       Student_id INT PRIMARY KEY,
+       Name VARCHAR(100),
+       Division VARCHAR(10),
+       Roll VARCHAR(20),
+       Gender VARCHAR(10),
+       Dob VARCHAR(20),
+       Email VARCHAR(100),
+       Phone VARCHAR(20),
+       Address VARCHAR(255),
+       Teacher VARCHAR(100),
+       PhotoSample VARCHAR(10)
+       );
+   ```
 
-
-
-
-
-
-
-
-
-
+---
 ## 📂 Project Structure  
 
 ```
@@ -122,6 +115,11 @@ python main.py
 📊 Attendance Sheet
 ## 🎬 Demo
 ![Face Recognition Demo](college_images/Attendance.png)
+
+
+📊 Attendance Sheet
+## 🎬 Demo
+![Face Recognition Demo](college_images/aap.png)
 
 
 🎥 Face Recognition in Action
