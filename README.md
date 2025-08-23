@@ -196,7 +196,7 @@ CAMERA_INDEX = 0
 
 🎥 fill attendance Manually
 ## 🎬 Demo
-![Face Recognition Demo](college_images/app.png)
+![Face Recognition Demo](college_images/aap.png)
 
 
 🎥 Face Recognition in Action
