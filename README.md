@@ -28,67 +28,55 @@ A desktop application to manage student records and mark attendance using **real
 
 ---
 
-## 📁 Project Structure (Suggested)
+## 📂 Project Structure  
 
 ```
-face-recognition-attendance/
-├─ app.py                      # Main Tkinter launcher
-├─ config.py                   # DB config & constants
-├─ requirements.txt
-├─ .env                        # DB creds (not committed)
-├─ resources/
-│  ├─ haarcascades/haarcascade_frontalface_default.xml
-│  └─ icons/ ...
-├─ data/
-│  ├─ dataset/                 # Captured face images (per-ID)
-│  ├─ trainer/                 # Trained model file (trainer.yml)
-│  └─ attendance/              # Attendance CSV exports
-├─ modules/
-│  ├─ student.py               # CRUD for students
-│  ├─ train.py                 # Training pipeline (LBPH)
-│  ├─ face_recognition.py      # Live recognition & marking
-│  ├─ attendance.py            # View/export attendance
-│  ├─ developer.py             # Developer/about window
-│  └─ help.py                  # Help & troubleshooting UI
-└─ utils/
-   ├─ db.py                    # MySQL connection helpers
-   ├─ camera.py                # Webcam helpers
-   ├─ detection.py             # Haar cascade detect helpers
-   └─ io.py                    # CSV/image I/O utilities
-```
+📁 Face-Recognition-Attendance-System  
+│── main.py  
+│── student.py  
+│── train.py  
+│── face_recognition.py  
+│── attendance.py  
+│── developer.py  
+│── help.py  
+│── requirements.txt  
+│── haarcascade_frontalface_default.xml  
+│── classifier.xml   (auto-generated)  
+│── Ajay.csv         (attendance file)  
+│
+├── 📁 data/             # Captured student images  
+├── 📁 college_images/   # GUI related images  
+```  
 
 > Your existing modules (Student, Train, Face Recognition, Attendance, Developer, Help) map directly to `modules/` above.
 
 ---
 
-## 🗄️ Database Schema (MySQL)
+## 🗄️ Database Setup  
 
-```sql
-CREATE DATABASE IF NOT EXISTS fr_attendance CHARACTER SET utf8mb4;
-USE fr_attendance;
+   ```sql
+   >>>>>>> 6f90ecb
+             CREATE DATABASE IF NOT EXISTS face_recognizer;
+             USE face_recognizer;
 
-CREATE TABLE IF NOT EXISTS students (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  roll_no VARCHAR(50) UNIQUE NOT NULL,
-  name VARCHAR(100) NOT NULL,
-  dept VARCHAR(100),
-  year VARCHAR(20),
-  phone VARCHAR(20),
-  email VARCHAR(120),
-  photo_count INT DEFAULT 0,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB;
-
-CREATE TABLE IF NOT EXISTS attendance (
-  id BIGINT AUTO_INCREMENT PRIMARY KEY,
-  student_id INT NOT NULL,
-  status ENUM('Present','Absent','Late') DEFAULT 'Present',
-  marked_at DATETIME NOT NULL,
-  session_date DATE NOT NULL,
-  FOREIGN KEY (student_id) REFERENCES students(id)
-    ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB;
-```
+       CREATE TABLE IF NOT EXISTS student (
+       Dep VARCHAR(50),
+       Course VARCHAR(50),
+       Year VARCHAR(20),
+       Semester VARCHAR(20),
+       Student_id INT PRIMARY KEY,
+       Name VARCHAR(100),
+       Division VARCHAR(10),
+       Roll VARCHAR(20),
+       Gender VARCHAR(10),
+       Dob VARCHAR(20),
+       Email VARCHAR(100),
+       Phone VARCHAR(20),
+       Address VARCHAR(255),
+       Teacher VARCHAR(100),
+       PhotoSample VARCHAR(10)
+       );
+   ```
 
 ---
 
@@ -324,4 +312,3 @@ set DB_NAME=fr_attendance
 python app.py
 ```
 
-> Replace placeholders as needed. If you already have modules and UI, you can paste this README into your repo and tweak the **Project Structure** and **Config** values accordingly.
